@@ -26,7 +26,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # Добавление тестов
 file(GLOB TEST_SOURCES tests/*.cpp)
 add_executable(runTests ${TEST_SOURCES})
-target_link_libraries(runTests ip_library ${GTEST_LIBRARIES})
+target_link_libraries(runTests ip_library ${GTEST_LIBRARIES} pthread)
 
 # Регистрация тестов
 add_test(NAME IPLibTests COMMAND runTests)
